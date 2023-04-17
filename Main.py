@@ -12,7 +12,9 @@ def call_GUI1():    #for Static Button
 def call_GUI2():    #For Real Time Button
     win3 = Toplevel(root)
     Third_Window(win3)
+    win3.destroy()
     return
+
 #Main window
 class First_Window:     
     def __init__(self,root):    
@@ -163,12 +165,15 @@ class Second_Window:
 
         button2 = tk.Button(text='Quit', command=root.destroy)
         canvas1.create_window(200, 200, window=button2)'''
+
+
 from keras.models import load_model
 from time import sleep
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.utils import img_to_array
 from keras.preprocessing import image
 import cv2
 import numpy as np
+
 class Third_Window:     
     def __init__(self,root):    
         self.root=root
